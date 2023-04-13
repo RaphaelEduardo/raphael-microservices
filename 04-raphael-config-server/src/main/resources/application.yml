@@ -1,0 +1,15 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: raphael-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:RaphaelEduardo/raphael-config-server.git
+          # username: username (se o repositório for privado)
+          # password: password (se o repositório for privado)
+          default-label: main
+          search-paths:
+          - 'greeting-service*'
